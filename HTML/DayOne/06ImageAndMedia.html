@@ -1,0 +1,146 @@
+<!-- 
+<img> tag and attributes (src, alt, width, height)
+<figure> and <figcaption>
+<audio>, <video> tags
+Embedding YouTube, PDFs, etc. with <iframe>   
+-->
+
+1️⃣ <img> – Displaying Images
+✅ Purpose: Displays an image on the web page.
+✅ Syntax:
+<img src="image-path" alt="description" width="value" height="value">
+✅ Important attributes:
+Attribute	Purpose
+src	The path (URL or file path) to the image
+alt	Alternate text (shows if image fails to load + improves accessibility + helps SEO)
+width	Width of image (pixels or %)
+height	Height of image (pixels or %)
+
+✅ Example 1: Basic image
+<img src="logo.png" alt="Company Logo">
+✅ Example 2: Image with size
+<img src="logo.png" alt="Company Logo" width="200" height="100">
+✅ Responsive tip: Instead of setting both width and height, often you set only width, and height scales automatically.
+
+🟢 2️⃣ <figure> and <figcaption>
+✅ Purpose: Groups media (image, video, diagram, etc.) + caption.
+✅ Helps with semantic HTML (meaningful structure).
+✅ Syntax:
+<figure>
+  <img src="cat.jpg" alt="A cute cat" width="300">
+  <figcaption>A cute cat sitting on the sofa.</figcaption>
+</figure>
+✅ How it appears:
+The image.
+Below it: A cute cat sitting on the sofa.
+
+✅ Why use <figure> and <figcaption>?
+Improves accessibility + SEO
+Makes your code cleaner + easier to style
+
+🟢 3️⃣ <audio> – Embedding Audio
+✅ Purpose: Embed sound on the page.
+✅ Syntax:
+<audio controls>
+  <source src="audio-file.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+✅ Key attributes:
+Attribute	    Purpose
+controls	    Shows play/pause buttons
+autoplay	    Start playing automatically (use carefully)
+loop	        Play repeatedly
+muted	        Start muted
+preload	How much browser loads before playing (auto, metadata, none)
+✅ Example:
+<audio controls loop>
+  <source src="song.mp3" type="audio/mpeg">
+  <source src="song.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
+
+🟢 4️⃣ <video> – Embedding Video
+✅ Purpose: Display video files.
+✅ Syntax:
+<video controls width="400" height="300">
+  <source src="video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+✅ Attributes:
+Attribute	Purpose
+controls	Display video controls
+autoplay	Start playing automatically
+loop	Replay video repeatedly
+muted	Start muted
+poster	Image to show before video plays
+width/height	Set video dimensions
+✅ Example with poster:
+<video controls poster="thumbnail.jpg" width="400">
+  <source src="clip.mp4" type="video/mp4">
+  <source src="clip.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+🟢 5️⃣ Embedding External Content with <iframe>
+✅ Purpose: Embed other web pages, YouTube videos, PDFs, Google Maps, etc.
+✅ Basic Syntax:
+<iframe src="url" width="width" height="height"></iframe>
+✅ Embed YouTube video:
+<i frame width="560" height="315" 
+  src="https://www.youtube.com/embed/VIDEO_ID"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+🔹 Replace VIDEO_ID with the actual YouTube video ID.
+
+✅ Embed a PDF:
+<iframe src="files/sample.pdf" width="600" height="400">
+  This browser does not support PDFs. Please download the PDF to view it: 
+  <a href="files/sample.pdf">Download PDF</a>.
+</iframe>
+✅ Tip: You can embed external PDFs too:
+<iframe src="https://example.com/sample.pdf" width="600" height="400"></iframe>
+✅ Embed Google Maps:
+<iframe
+  src="https://www.google.com/maps/embed?pb=..."
+  width="600" height="450" style="border:0;"
+  allowfullscreen="" loading="lazy">
+</iframe>
+✅ You get the exact URL from Google Maps → Share → Embed a map.
+
+🟢 6️⃣ Quick Summary Table
+Tag	Purpose	Key attributes
+<img>	Embed image	src, alt, width, height
+<figure>	Group media + caption	—
+<figcaption>	Caption for figure	—
+<audio>	Embed audio	controls, autoplay, loop, muted
+<video>	Embed video	controls, autoplay, poster, loop, muted, width, height
+<iframe>	Embed external content	src, width, height, allowfullscreen
+
+🟢 7️⃣ Example Putting Everything Together
+<figure>
+  <img src="dog.jpg" alt="Happy dog" width="300">
+  <figcaption>A happy dog in the park</figcaption>
+</figure>
+
+<audio controls>
+  <source src="music.mp3" type="audio/mpeg">
+  Your browser does not support audio.
+</audio>
+
+<video controls width="400" poster="poster.jpg">
+  <source src="movie.mp4" type="video/mp4">
+  Your browser does not support video.
+</video>
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="560" height="315"
+  title="YouTube Video" frameborder="0" allowfullscreen></iframe>
+
+<iframe src="files/document.pdf" width="600" height="400"></iframe>
+✅ Best practices
+Always use alt for images for accessibility.
+Provide multiple <source> formats for audio/video for better browser support.
+Use iframe responsibly (embedding 3rd party sites affects performance/security).
+

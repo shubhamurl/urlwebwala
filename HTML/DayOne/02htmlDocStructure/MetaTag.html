@@ -1,0 +1,153 @@
+ // Full HTML with Metadata and Favicon
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn HTML metadata, favicon, and more.">
+  <meta name="author" content="Shubham Singh">
+  <title>HTML Metadata Example</title>
+  
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Embedded CSS -->
+  <style>
+    body { font-family: Arial; background-color: #f9f9f9; }
+    h1 { color: teal; }
+  </style>
+
+  <!-- Embedded JavaScript -->
+  <script>
+    console.log("Page loaded!");
+  </script>
+</head>
+<body>
+  <h1>Welcome to My Page</h1>
+  <p>This page demonstrates metadata and favicon.</p>
+</body>
+</html>
+
+// notes
+
+1. What is Metadata in HTML?->Metadata = data about the data (the web page itself).
+-It describes information like:
+    -the page title,  -<title>HTML Metadata Example</title>
+    -character encoding, -<meta charset="UTF-8">
+    -viewport settings, -<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    -SEO keywords,
+    -author information. -<meta name="author" content="Shubham Singh">
+- Metadata is usually placed inside the <head> element.
+
+2. The <html>, <head>, and <body> Elements
+Let’s start with the basic structure:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata and resources go here -->
+  </head>
+  <body>
+    <!-- Page content goes here -->
+  </body>
+</html>
+
+✅ <html>
+The root element wrapping everything.
+The lang attribute (e.g., lang="en") helps search engines and screen readers.
+
+✅ <head>
+Contains metadata, links to CSS, JavaScript, favicon, etc.
+Does not display content directly on the page.
+
+✅ <body>
+Contains all visible page content (headings, paragraphs, images, links).
+
+The <title> Element
+✅ Defines the title of the web page (the text you see in the browser tab or when you bookmark).
+Example:
+<title>My Awesome Website</title>
+✅ Important for SEO and user experience.
+
+The <meta> Element
+✅ Provides metadata (information about the page).
+✅ Self-closing tag.
+Common <meta> uses:
+1️⃣ Character Encoding
+<meta charset="UTF-8">
+Ensures correct text rendering (supports most languages and symbols).
+
+2️⃣ Viewport Settings (for responsive design)
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Ensures your page scales properly on mobile devices.
+
+3️⃣ Description (SEO)
+<meta name="description" content="A simple webpage example with metadata.">
+Used by search engines to show a summary.
+
+4️⃣ Author
+<meta name="author" content="John Doe">
+
+Example combining meta tags:
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn HTML metadata step by step.">
+  <meta name="author" content="Shubham Singh">
+</head>
+
+🌟 5. The <link> Element
+✅ Used to link external resources.
+Common usage:
+Linking CSS files
+Linking icons (favicons)
+Example linking a CSS file:
+
+<link rel="stylesheet" href="styles.css">
+✅ Attributes:
+rel describes the relationship (e.g., stylesheet, icon)
+href specifies the file location.
+
+🌟 6. The <style> Element
+✅ Embed CSS styles directly inside HTML.
+/* Syntax:
+<style>
+  body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    color: #333;
+  }
+</style> */
+
+✅ Placed inside the <head>.
+✅ Best practice: Use <link> to attach external stylesheets for larger projects.
+
+/* 🌟 7. The <script> Element
+✅ Used to embed or reference JavaScript code.
+Example with embedded script:
+<script> */
+  console.log("Hello from JavaScript!");
+</script>
+Example linking external JS:
+<script src="script.js"></script>
+✅ Placement:
+In <head> (for early scripts)
+Before </body> (recommended so the page loads first)
+
+🌟 8. Favicon
+✅ Favicon = the small icon shown in the browser tab next to the page title.
+Example:
+<link rel="icon" type="image/png" href="favicon.png">
+✅ Attributes:
+rel="icon" (relationship: favicon)
+type="image/png" (or image/x-icon for .ico)
+href = path to the favicon file
+Best practices:
+Use a 16×16 or 32×32 PNG or ICO file
+Place it in your project folder
+ 

@@ -1,0 +1,21 @@
+HTML Elements vs. Tags
+🔹 Tags:The instructions surrounded by angle brackets: <h1>, </p>, <img>.
+        Tags come in pairs (opening and closing) or can be self-closing.
+
+Example:<b>Hello</b>
+<b> is an opening tag.
+</b> is a closing tag.
+
+✅ Some tags are self-closing (do not have separate closing tags):
+<img src="image.jpg" alt="Description">
+<br>
+<hr>
+
+Elements:Everything from the opening tag to the closing tag, including the content.
+Example:<p>This is a paragraph.</p>
+Here, the whole line is an element.
+
+Think of it this way:
+Tag: instruction
+Element: the full package (tag + content)
+

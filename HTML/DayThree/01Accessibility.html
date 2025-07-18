@@ -1,0 +1,97 @@
+<!-- 
+ Alt text for images
+Using semantic tags properly
+ARIA roles (basic intro)
+tabindex, aria-label, aria-hidden
+-->
+
+1. Alt Text for Images (alt attribute)
+Purpose: Provides a text alternative for screen readers and when images don’t load.
+
+SEO + Accessibility benefit ✅
+
+Good practice: Describe the function or content of the image.
+
+✅ Example (Descriptive):
+html
+Copy
+Edit
+<img src="profile.jpg" alt="Shubham Singh smiling in front of a laptop">
+❌ Example (Avoid empty or vague alt text):
+html
+Copy
+Edit
+<img src="icon.png" alt="icon"> <!-- Not helpful -->
+Special Case: Decorative image (use empty alt):
+html
+Copy
+Edit
+<img src="decorative.png" alt="" aria-hidden="true">
+🧱 2. Using Semantic Tags Properly
+Semantic HTML makes content meaningful, improves SEO, and aids screen readers.
+
+Tag	Purpose
+<header>	Top section (logo, nav, title)
+<nav>	Navigation links
+<main>	Main content of the page
+<section>	Logical group of related content
+<article>	Independent content (e.g., blog post)
+<aside>	Sidebar or extra content
+<footer>	Footer section (info, links, copyright)
+
+Example:
+html
+Copy
+Edit
+<main>
+  <article>
+    <header>
+      <h1>HTML Accessibility Basics</h1>
+    </header>
+    <p>Learn how to make your web pages accessible to everyone.</p>
+  </article>
+</main>
+♿ 3. ARIA Roles – Basic Intro
+ARIA = Accessible Rich Internet Applications
+Adds extra accessibility info for screen readers when native HTML isn't enough.
+
+ARIA Role	Purpose
+role="button"	Makes a non-button act like a button
+role="alert"	Announce alert messages
+role="dialog"	Identifies modals/dialogs
+role="navigation"	Declares nav sections
+
+Example:
+html
+Copy
+Edit
+<div role="button" tabindex="0" aria-label="Submit form">Submit</div>
+👆 4. tabindex, aria-label, aria-hidden
+✅ tabindex
+Controls keyboard tab order.
+
+tabindex="0": Adds element to tab order (usually non-focusable ones like <div>).
+
+tabindex="-1": Focusable with JS, but not tabbed to.
+
+html
+Copy
+Edit
+<div tabindex="0">Focusable with tab</div>
+✅ aria-label
+Adds a readable label for screen readers.
+
+html
+Copy
+Edit
+<button aria-label="Close menu">X</button>
+✅ aria-hidden
+Hides an element from screen readers.
+
+html
+Copy
+Edit
+<div aria-hidden="true">👻 Decorative icon</div>
+✅ Bonus: When to use ARIA?
+📌 First use native HTML (like <button>, <nav>, <input>)
+📌 Use ARIA only when needed (for custom components)

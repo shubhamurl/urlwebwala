@@ -1,0 +1,250 @@
+<!-- <table>, <thead>, <tbody>, <tfoot>
+<tr>, <th>, <td>
+Table attributes: colspan, rowspan
+Table styling best practice -->
+
+
+1️⃣ Basic Table Structure
+HTML tables are made of rows and cells.
+✅ Key Elements:
+<table>: The table container
+<tr>: Table row
+<th>: Header cell (bold, centered by default)
+<td>: Data cell (regular cell)
+✅ Basic Example:
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Apple</td>
+    <td>$1</td>
+  </tr>
+  <tr>
+    <td>Banana</td>
+    <td>$0.50</td>
+  </tr>
+</table>
+✅ How it looks:
+Item	Price
+Apple	$1
+Banana	$0.50
+
+🟢 2️⃣ Semantic Table Sections
+✅ These help organize your table for clarity and accessibility:
+Tag	Purpose
+<thead>	Table header (usually column labels)
+<tbody>	Main body rows
+<tfoot>	Summary/footer rows
+✅ Example:
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Qty</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apple</td>
+      <td>3</td>
+      <td>$3</td>
+    </tr>
+    <tr>
+      <td>Banana</td>
+      <td>5</td>
+      <td>$2.50</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">Total</td>
+      <td>$5.50</td>
+    </tr>
+  </tfoot>
+</table>
+✅ How it appears:
+Product	Qty	Price
+Apple	3	$3
+Banana	5	$2.50
+Total		$5.50
+
+✅ Why use <thead>, <tbody>, <tfoot>?
+Improves screen reader navigation
+Helps with styling and JavaScript
+Makes tables more readable
+
+🟢 3️⃣ colspan and rowspan
+These attributes merge cells horizontally or vertically.
+✅ colspan = merge columns across:
+Example:
+<table border="1">
+  <tr>
+    <th colspan="2">Employee Info</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>John Doe</td>
+  </tr>
+</table>
+✅ Result:
+Employee Info
+Name
+✅ rowspan = merge rows:
+Example:
+<table border="1">
+  <tr>
+    <th rowspan="2">Department</th>
+    <td>Sales</td>
+  </tr>
+  <tr>
+    <td>Marketing</td>
+  </tr>
+</table>
+✅ Result:
+Department	Sales
+Marketing
+
+🟢 4️⃣ Best Practices for Table Styling
+✅ Avoid old attributes (border, bgcolor) in HTML—use CSS instead.
+✅ Example with CSS:
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  thead {
+    background-color: #f2f2f2;
+  }
+  tfoot {
+    font-weight: bold;
+    background-color: #f9f9f9;
+  }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Qty</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apple</td>
+      <td>3</td>
+      <td>$3</td>
+    </tr>
+    <tr>
+      <td>Banana</td>
+      <td>5</td>
+      <td>$2.50</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">Total</td>
+      <td>$5.50</td>
+    </tr>
+  </tfoot>
+</table>
+✅ Result:
+
+Clean borders
+
+Padded cells
+
+Colored headers and footer
+
+✅ Other Styling Tips:
+
+Use border-collapse: collapse; to remove double borders.
+
+Use :hover in CSS to highlight rows on hover.
+
+Keep data organized—don’t merge cells unnecessarily.
+
+🟢 5️⃣ Summary Cheat Sheet
+Tag	What it does
+<table>	Starts the table
+<thead>	Groups header rows
+<tbody>	Groups body rows
+<tfoot>	Groups footer rows
+<tr>	Table row
+<th>	Header cell (bold)
+<td>	Data cell
+colspan	Merge columns horizontally
+rowspan	Merge rows vertically
+
+🟢 6️⃣ Full Example Putting Everything Together
+html
+Copy
+Edit
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  thead {
+    background: #333;
+    color: #fff;
+  }
+  tfoot {
+    background: #f0f0f0;
+    font-weight: bold;
+  }
+  tr:hover {
+    background: #f9f9f9;
+  }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Qty</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apple</td>
+      <td>3</td>
+      <td>$3</td>
+    </tr>
+    <tr>
+      <td>Banana</td>
+      <td>5</td>
+      <td>$2.50</td>
+    </tr>
+    <tr>
+      <td colspan="2">Discount</td>
+      <td>-$1.00</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">Total</td>
+      <td>$4.50</td>
+    </tr>
+  </tfoot>
+</table>
+✅ This produces:
+
+Clean, styled table
+
+Hover effect
+
+Footer with total

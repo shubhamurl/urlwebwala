@@ -1,0 +1,73 @@
+<!-- 
+Geolocation API
+Drag and Drop
+Web Storage (localStorage, sessionStorage)
+Canvas API (for drawings)
+Audio/Video APIs -->
+
+
+ 1. Geolocation API
+Purpose: Get the geographic location (latitude, longitude) of the user's device.
+Common use: Maps, location-based services.
+Example:
+navigator.geolocation.getCurrentPosition((position) => {
+  console.log(position.coords.latitude, position.coords.longitude);
+});
+Permission needed: Yes, browser prompts user for location access.
+
+🖱️ 2. Drag and Drop API
+Purpose: Enables drag-and-drop interactions for DOM elements.
+Common use: Reordering lists, uploading files.
+<div draggable="true" ondragstart="dragStart(event)">Drag me</div>
+<div ondrop="drop(event)" ondragover="event.preventDefault()">Drop here</div>
+
+<script>
+  function dragStart(e) {
+    e.dataTransfer.setData("text/plain", e.target.id);
+  }
+  function drop(e) {
+    e.preventDefault();
+    const data = e.dataTransfer.getData("text/plain");
+    e.target.appendChild(document.getElementById(data));
+  }
+</script>
+
+💾 3. Web Storage API
+Stores data in the browser with two options:
+a. localStorage
+Persists even after the browser is closed.
+Example:
+localStorage.setItem("username", "shubham");
+console.log(localStorage.getItem("username"));
+b. sessionStorage
+Clears when the tab is closed.
+
+Example:
+sessionStorage.setItem("theme", "dark");
+console.log(sessionStorage.getItem("theme"));
+
+🎨 4. Canvas API
+Purpose: Draw graphics, charts, games, and animations using JavaScript.
+Common use: Image editing, custom drawings, game UIs.
+Example:
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<script>
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "blue";
+  ctx.fillRect(10, 10, 150, 75);
+</script>
+
+🎧📹 5. Audio/Video APIs
+Purpose: Control and manipulate media elements.
+Tags: <audio>, <video>
+Features: Play, pause, control volume, track progress.
+Example:
+<video id="myVideo" width="320" controls>
+  <source src="movie.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+<script>
+  const video = document.getElementById("myVideo");
+  video.play();
+</script>

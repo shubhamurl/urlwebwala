@@ -1,0 +1,83 @@
+<!-- 
+ <meta charset="UTF-8">
+Viewport settings
+Description, keywords, author
+Open Graph (for social media) --> 
+1. <meta charset="UTF-8">
+Purpose: Defines the character encoding used by the document.
+
+UTF-8 supports most characters from all languages (including emojis 😄).
+
+Placement: Always in <head>.
+
+✅ Recommended for all web pages.
+
+Example:
+
+html
+Copy
+Edit
+<meta charset="UTF-8">
+📱 2. Viewport Settings (<meta name="viewport">)
+Purpose: Controls how the page scales on different devices (mobile responsiveness).
+
+Common use: Ensures your page looks good on phones and tablets.
+
+Example:
+
+html
+Copy
+Edit
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+🔍 Key attributes:
+
+width=device-width → matches screen width.
+
+initial-scale=1.0 → sets initial zoom level.
+
+📝 3. SEO-related Meta Tags
+These help search engines understand your page content.
+
+a. Description
+Appears in Google search results.
+
+Ideal length: 150–160 characters.
+
+html
+Copy
+Edit
+<meta name="description" content="This is a beginner-friendly guide to HTML meta tags for SEO and social sharing.">
+b. Keywords (👎 Not used by Google anymore, but some minor engines still use it)
+html
+Copy
+Edit
+<meta name="keywords" content="HTML, meta tags, SEO, web development">
+c. Author
+Sets the author of the document.
+
+html
+Copy
+Edit
+<meta name="author" content="Shubham Singh">
+🌐 4. Open Graph Meta Tags (for Social Media Sharing)
+Used by Facebook, LinkedIn, WhatsApp, etc. to generate rich link previews.
+
+Example:
+html
+Copy
+Edit
+<meta property="og:title" content="Learn Meta Tags - A Guide">
+<meta property="og:description" content="A quick and clear explanation of HTML meta tags.">
+<meta property="og:image" content="https://example.com/image.jpg">
+<meta property="og:url" content="https://example.com/page.html">
+<meta property="og:type" content="website">
+✅ Bonus: Twitter Card Meta Tags
+For Twitter-specific rich previews:
+
+html
+Copy
+Edit
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meta Tag Guide">
+<meta name="twitter:description" content="Everything you need to know about HTML meta tags.">
+<meta name="twitter:image" content="https://example.com/meta-preview.jpg">

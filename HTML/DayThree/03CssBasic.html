@@ -1,0 +1,112 @@
+<!-- 
+What is CSS? (Inline, Internal, External)
+Syntax (selectors, properties, values)
+CSS Comments
+!important rule
+-->
+
+What is CSS?
+CSS (Cascading Style Sheets) is a styling language used to control the look and layout of HTML elements on a web page.
+
+Controls color, fonts, spacing, layout, responsiveness, animations, etc.
+
+Separates content (HTML) from presentation (CSS) ✅
+
+✏️ 1. CSS Syntax
+css
+Copy
+Edit
+selector {
+  property: value;
+}
+Example:
+css
+Copy
+Edit
+h1 {
+  color: blue;
+  font-size: 24px;
+}
+Part	Description
+h1	Selector (target element)
+color	Property (what to style)
+blue	Value (how to style it)
+
+📦 2. Types of CSS
+a. Inline CSS
+Written inside HTML tag using style attribute.
+
+❌ Not recommended for multiple styles.
+
+html
+Copy
+Edit
+<p style="color: red;">This is red text</p>
+b. Internal CSS
+Written inside <style> tag in the <head> of HTML.
+
+Good for single-page projects.
+
+html
+Copy
+Edit
+<head>
+  <style>
+    body {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+c. External CSS
+CSS code is in a separate .css file and linked to HTML.
+
+✅ Best practice for most projects.
+
+html
+Copy
+Edit
+<!-- HTML -->
+<link rel="stylesheet" href="styles.css">
+css
+Copy
+Edit
+/* styles.css */
+p {
+  font-size: 18px;
+  color: green;
+}
+💬 3. CSS Comments
+Used to explain or temporarily disable styles.
+
+Ignored by the browser.
+
+css
+Copy
+Edit
+/* This is a comment */
+h1 {
+  color: blue; /* Heading color */
+}
+⚠️ 4. The !important Rule
+Overrides all other conflicting CSS rules, including inline styles.
+
+Use sparingly (can cause maintenance issues).
+
+Example:
+css
+Copy
+Edit
+p {
+  color: red !important;
+}
+Even if another rule or inline style sets it to blue, this one wins.
+
+🧠 Quick Summary:
+Feature	Description
+CSS	Adds styles to HTML
+Syntax	selector { property: value; }
+Types	Inline, Internal, External
+Comments	/* your comment here */
+!important	Forces a style to override all others
+
+Let me know if you want a mini project or practice quiz to test your CSS knowledge!

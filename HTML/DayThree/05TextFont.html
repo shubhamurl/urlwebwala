@@ -1,0 +1,137 @@
+<!-- 
+ Font-family, size, weight
+Text alignment, decoration, transform
+Line height and letter spacing
+Google Fonts import
+ -->
+
+ 1. Font Family, Size, Weight
+✅ font-family
+Specifies the typeface for text.
+
+css
+Copy
+Edit
+p {
+  font-family: 'Arial', sans-serif;
+}
+🔸 Use fallback fonts (e.g., sans-serif, serif, monospace) in case the main font is not available.
+
+✅ font-size
+Controls the size of text.
+
+css
+Copy
+Edit
+h1 {
+  font-size: 32px;
+}
+🧠 Units: px, em, rem, %, vw (relative to viewport)
+
+✅ font-weight
+Defines how bold or light the text is.
+
+css
+Copy
+Edit
+strong {
+  font-weight: bold; /* or 700 */
+}
+Common values:
+
+normal (400)
+
+bold (700)
+
+lighter, bolder
+
+Numeric: 100 to 900
+
+📐 2. Text Alignment, Decoration, Transform
+✅ text-align
+Aligns text horizontally.
+
+css
+Copy
+Edit
+p {
+  text-align: center; /* left, right, justify */
+}
+✅ text-decoration
+Adds or removes underline, overline, etc.
+
+css
+Copy
+Edit
+a {
+  text-decoration: none;
+}
+Values: none, underline, overline, line-through
+
+✅ text-transform
+Changes letter casing.
+
+css
+Copy
+Edit
+h2 {
+  text-transform: uppercase;
+}
+Values:
+
+uppercase → ALL CAPS
+
+lowercase → all small
+
+capitalize → First Letter Capitalized
+
+🔡 3. Line Height and Letter Spacing
+✅ line-height
+Controls space between lines of text (vertical spacing).
+
+css
+Copy
+Edit
+p {
+  line-height: 1.6;
+}
+Unitless values (1.6) scale with font size. You can also use px, em.
+
+✅ letter-spacing
+Controls space between letters.
+
+css
+Copy
+Edit
+h1 {
+  letter-spacing: 2px;
+}
+🌐 4. Google Fonts Import
+Google Fonts provides free web fonts you can easily add to your site.
+
+✅ Step 1: Visit https://fonts.google.com
+✅ Step 2: Choose a font (e.g., Roboto), then click "Get embed code"
+✅ Step 3: Add <link> to your HTML <head>:
+html
+Copy
+Edit
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+✅ Step 4: Use it in your CSS:
+css
+Copy
+Edit
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+summary table:
+| Property          | Example                   | Purpose                      |
+| ----------------- | ------------------------- | ---------------------------- |
+| `font-family`     | `'Roboto', sans-serif`    | Set font style               |
+| `font-size`       | `16px`, `1.2em`           | Size of the text             |
+| `font-weight`     | `bold`, `400`, `700`      | Boldness of text             |
+| `text-align`      | `center`, `left`          | Horizontal alignment         |
+| `text-decoration` | `none`, `underline`       | Add/remove lines to text     |
+| `text-transform`  | `uppercase`, `capitalize` | Change text casing           |
+| `line-height`     | `1.5`, `24px`             | Vertical space between lines |
+| `letter-spacing`  | `1px`, `0.2em`            | Space between letters        |

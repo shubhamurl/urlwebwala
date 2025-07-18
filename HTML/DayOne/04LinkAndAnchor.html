@@ -1,0 +1,130 @@
+<!-- <a> tag (internal, external, download, mailto, tel)
+Target attribute (_blank, _self)
+Anchor links with id  teach me well in detail -->
+
+1️⃣ What is the <a> Tag?
+✅ <a> stands for anchor.
+✅ It creates hyperlinks, which can:
+Navigate to another web page (internal or external)
+Download a file
+Open email clients
+Start phone calls
+Jump to sections on the same page (anchor links)
+
+🟢 2️⃣ Basic Syntax
+<a href="URL">Link Text</a>
+href: The destination address.
+
+Link Text: The clickable text.
+
+🟢 3️⃣ Types of Links
+Let’s see them one by one:
+✅ A. Internal Links
+👉 Link to another page within the same website.
+Example:
+<a href="about.html">About Us</a>
+When you click this, it goes to:
+
+https://yourwebsite.com/about.html
+TIP: Use relative paths:
+about.html (same folder)
+folder/page.html (inside folder)
+
+✅ B. External Links
+👉 Link to another website.
+Example:
+<a href="https://www.example.com">Visit Example</a>
+TIP: Always start with https:// or http:// for external URLs.
+
+✅ C. Download Links
+👉 Make a file download instead of opening.
+Example:
+<a href="files/report.pdf" download>Download Report</a>
+✅ download attribute tells the browser to download the file.
+
+Optionally, specify filename:
+<a href="files/report.pdf" download="MyReport.pdf">Download Report</a>
+When clicked, it saves as MyReport.pdf.
+
+✅ D. Email Links (mailto:)
+👉 Open the user’s default email app to send an email.
+Example:
+<a href="mailto:info@example.com">Email Us</a>
+Add subject and body:
+<a href="mailto:info@example.com?subject=Hello&body=I want to know more.">
+  Email with Subject
+</a>
+✅ Note: Spaces become %20 automatically.
+
+✅ E. Phone Links (tel:)
+👉 Make a click-to-call link (useful on mobile).
+Example:
+<a href="tel:+1234567890">Call Us</a>
+When clicked on a phone, it starts dialing the number.
+
+🟢 4️⃣ Target Attribute
+The target attribute controls where the link opens:
+Value	What it does
+_self	Default – open in the same tab
+_blank	Open in a new tab or window
+✅ Example:
+<a href="https://www.example.com" target="_blank">Open in New Tab</a>
+✅ Tip:
+When using _blank, always add rel="noopener noreferrer" for security:
+<a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
+  Open Securely in New Tab
+</a>
+🟢 5️⃣ Anchor Links (Jump to a Section)
+👉 These let you jump to another part of the same page or another page’s section.
+
+✅ Step 1: Add id to the target element
+<h2 id="contact">Contact Us</h2>
+<p>Here is our contact information...</p>
+✅ Step 2: Create a link to that id
+<a href="#contact">Go to Contact Section</a>
+When clicked, it scrolls to <h2 id="contact">.
+
+✅ Jump to an id on another page:
+<a href="about.html#team">Meet Our Team</a>
+This goes to about.html, then scrolls to the element with id="team".
+
+🟢 6️⃣ Full Examples
+Let’s put everything together:
+<!-- Internal link -->
+<a href="services.html">Our Services</a>
+
+<!-- External link opening in new tab -->
+<a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+
+<!-- Download link -->
+<a href="files/brochure.pdf" download="CompanyBrochure.pdf">Download Brochure</a>
+
+<!-- Email link -->
+<a href="mailto:support@example.com?subject=Help Needed&body=Please assist me.">Contact Support</a>
+
+<!-- Phone link -->
+<a href="tel:+19876543210">Call Customer Service</a>
+
+<!-- Anchor link to section on the same page -->
+<a href="#faq">Jump to FAQ</a>
+
+<!-- Target section -->
+<h2 id="faq">Frequently Asked Questions</h2>
+🟢 7️⃣ Quick Cheat Sheet
+Use Case	href Example	Extra Attributes
+Internal link	about.html	
+External link	https://www.example.com	target="_blank" + rel
+Download file	files/file.pdf	download
+Email link	mailto:info@example.com	
+Phone link	tel:+1234567890	
+Anchor on same page	#sectionId	
+Anchor on another page	page.html#sectionId	
+
+✅ Tip:
+
+Always test your links!
+
+Make sure files exist.
+
+Use proper protocols (https://, mailto:, etc.).
+

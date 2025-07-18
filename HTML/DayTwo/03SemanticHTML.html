@@ -1,0 +1,169 @@
+<!-- <header>, <footer>, <main>, <article>, <section>, <nav>, <aside>
+<time>, <address>, <abbr>, <details>, <summary> -->
+
+1️⃣ <header>
+✅ Purpose: Introductory content for a page or section.
+✅ Usually contains:
+Logo
+Site name
+Navigation
+Headline
+Example:
+<header>
+  <h1>My Blog</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+  </nav>
+</header>
+✅ Can be used **inside <article> or <section> too.
+
+🟢 2️⃣ <footer>
+✅ Purpose: Footer content for a page or section.
+✅ Usually includes:
+Copyright
+Contact info
+Related links
+Example:
+<footer>
+  <p>&copy; 2025 My Blog</p>
+  <nav>
+    <a href="/privacy">Privacy Policy</a>
+  </nav>
+</footer>
+
+🟢 3️⃣ <main>
+✅ Purpose: Main unique content of the page.
+✅ Only one <main> per page.
+Example:
+<main>
+  <h2>Latest Articles</h2>
+  <article>
+    <h3>Learning HTML</h3>
+    <p>HTML is the backbone of the web...</p>
+  </article>
+</main>
+
+🟢 4️⃣ <article>
+✅ Purpose: Self-contained content that could stand alone (e.g., blog post, news article).
+Example:
+<article>
+  <header>
+    <h2>How to Bake Bread</h2>
+    <p>Published on <time datetime="2025-07-04">July 4, 2025</time></p>
+  </header>
+  <p>Here are the steps to bake bread...</p>
+  <footer>
+    <p>Written by Alice.</p>
+  </footer>
+</article>
+
+🟢 5️⃣ <section>
+✅ Purpose: Thematic grouping of related content (e.g., features, services).
+Example:
+<section>
+  <h2>Our Services</h2>
+  <p>We offer web design and development.</p>
+</section>
+✅ Tip: Use <section> only when content has its own heading.
+
+🟢 6️⃣ <nav>
+✅ Purpose: Group of navigation links.
+Example:
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+✅ You can put <nav> in <header>, <footer>, or standalone.
+
+🟢 7️⃣ <aside>
+✅ Purpose: Content related to the main content (e.g., sidebars, ads, callouts).
+Example:
+<aside>
+  <h3>Related Articles</h3>
+  <ul>
+    <li><a href="#">HTML Basics</a></li>
+    <li><a href="#">CSS Styling</a></li>
+  </ul>
+</aside>
+
+🟢 8️⃣ <time>
+✅ Purpose: Machine-readable date/time.
+Attribute	  Purpose
+datetime	  ISO format date (YYYY-MM-DD)
+Example:
+<time datetime="2025-07-04">July 4, 2025</time>
+✅ Tip: Helps search engines understand dates.
+
+🟢 9️⃣ <address>
+✅ Purpose: Contact information.
+Example:
+<address>
+  Contact us at <a href="mailto:info@example.com">info@example.com</a>.<br>
+  123 Main Street, City, Country.
+</address>
+✅ Note: Usually placed in <footer>.
+
+🟢 🔟 <abbr>
+✅ Purpose: Abbreviation with a tooltip.
+Example:
+<p><abbr title="Hypertext Markup Language">HTML</abbr> is a web standard.</p>
+✅ Hovering shows: Hypertext Markup Language.
+
+🟢 1️⃣1️⃣ <details> and <summary>
+✅ Purpose: Expand/collapse content.
+Example:
+<details>
+  <summary>More Information</summary>
+  <p>This section has additional details about the topic.</p>
+</details>
+✅ Default state: closed. Click More Information to expand.
+
+🟢 1️⃣2️⃣ Putting It All Together
+Here’s a complete example page:
+<header>
+  <h1>My Personal Blog</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <header>
+      <h2>Exploring Semantic HTML</h2>
+      <p>Published on <time datetime="2025-07-04">July 4, 2025</time></p>
+    </header>
+    <p><abbr title="Hypertext Markup Language">HTML</abbr> makes your websites accessible and structured.</p>
+    <details>
+      <summary>What is Semantic HTML?</summary>
+      <p>Semantic HTML uses meaningful tags to describe content.</p>
+    </details>
+  </article>
+
+  <aside>
+    <h3>Related Posts</h3>
+    <ul>
+      <li><a href="#">CSS Basics</a></li>
+      <li><a href="#">JavaScript Tips</a></li>
+    </ul>
+  </aside>
+</main>
+
+<footer>
+  <address>
+    Contact: <a href="mailto:me@example.com">me@example.com</a>
+  </address>
+  <p>&copy; 2025 My Blog</p>
+</footer> 
+✅ Why use semantic HTML?
+
+Better SEO (search engines understand your content)
+
+Improved accessibility for screen readers
+
+Easier to maintain and style

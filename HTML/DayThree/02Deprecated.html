@@ -1,0 +1,33 @@
+<!-- <center>, <font>, <big>, <blink>, etc. -->
+    
+What Does “Deprecated” Mean?
+Deprecated tags are no longer recommended in modern HTML because they are outdated and replaced by CSS or better semantic tags. Browsers may still support them, but they can be removed anytime, and they're bad for accessibility and maintainability.
+
+🛑 Deprecated Tags Overview:
+Tag	What it did	Why it’s deprecated	Use instead
+<center>	Center-align text or elements	Use CSS text-align: center;	CSS
+<font>	Change font face, size, or color	Use CSS font-family, color	CSS
+<big>	Increase font size slightly	Use CSS font-size	CSS
+<blink>	Make text blink (only worked in Netscape)	Not supported anymore	Don’t use
+<marquee>	Scroll text horizontally or vertically	Bad UX, not accessible	CSS animations
+<u> (old use)	Underline text (used for emphasis)	Confused with hyperlinks	Use <span style="text-decoration: underline">
+
+✅ Modern Equivalents Using CSS:
+✅ Instead of <center>
+html
+Copy
+Edit
+<p style="text-align: center;">Hello, world!</p>
+✅ Instead of <font color="red">
+html
+Copy
+Edit
+<p style="color: red;">Red text</p>
+✅ Instead of <big>
+html
+Copy
+Edit
+<span style="font-size: 1.5rem;">Big text</span>
+🧠 Pro Tip:
+Always separate content (HTML) from presentation (CSS) — it's best practice for modern, accessible, and responsive web development.
+

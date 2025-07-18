@@ -1,0 +1,58 @@
+<!-- 
+<iframe>
+<embed>
+<object>    
+-->
+
+1. <iframe> — Inline Frame
+Purpose: Embeds another webpage (or document) inside the current HTML page.
+
+Common use: Embedding YouTube videos, Google Maps, external websites.
+
+Example:
+
+html
+Copy
+Edit
+<iframe src="https://www.example.com" width="600" height="400"></iframe>
+✅ Can interact with JavaScript (with CORS restrictions).
+
+🔐 Security note: sandbox attribute can restrict iframe behavior (e.g., prevent form submissions, scripts).
+
+📎 2. <embed> — General-purpose Embedding
+Purpose: Embeds external content like PDFs, audio, video, Flash (now deprecated), etc.
+
+Common use: Embedding PDF files or multimedia.
+
+Example:
+
+html
+Copy
+Edit
+<embed src="file.pdf" type="application/pdf" width="600" height="400">
+❌ Minimal control over embedded content.
+
+✅ Works well for media formats and documents.
+
+🧩 3. <object> — Generic Embedded Resource
+Purpose: Embeds multimedia or external resources, including other HTML documents.
+
+More flexible than <embed>; can have fallback content.
+
+Example:
+
+html
+Copy
+Edit
+<object data="file.pdf" type="application/pdf" width="600" height="400">
+  <p>Your browser doesn't support PDFs. <a href="file.pdf">Download PDF</a>.</p>
+</object>
+✅ Can be used for SVG, HTML, Flash (legacy), PDFs, etc.
+
+Comparison:
+| Feature           | `<iframe>`          | `<embed>` | `<object>`  |
+| ----------------- | ------------------- | --------- | ----------- |
+| Embeds webpage    | ✅                   | ❌         | ✅ (limited) |
+| Embeds media      | ❌                   | ✅         | ✅           |
+| Fallback content  | ❌                   | ❌         | ✅           |
+| JavaScript access | ✅ (limited by CORS) | ❌         | ❌           |
